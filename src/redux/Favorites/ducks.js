@@ -53,7 +53,7 @@ export default function reducer(state=initialState, action){
         case types.FETCH_FAVORITES_SUCCEEDED:
             return {
                 ...state,
-                favorites: action.categories,
+                favorites: action.favorites,
                 loading: false
             };
         case types.FETCH_FAVORITES_FAILED:
@@ -62,18 +62,18 @@ export default function reducer(state=initialState, action){
                 error: action.error,
                 loading: false
             };
-        case types.FETCH_FAVORITES_REQUESTED:
+        case types.SAVE_FAVORITES_REQUESTED:
             return {
                 ...state,
                 loading: true
             };
-        case types.FETCH_FAVORITES_SUCCEEDED:
+        case types.SAVE_FAVORITES_SUCCEEDED:
             return {
                 ...state,
-                favorites: action.categories,
+                message: action.message,
                 loading: false
             };
-        case types.FETCH_FAVORITES_FAILED:
+        case types.SAVE_FAVORITES_FAILED:
             return {
                 ...state,
                 error: action.error,
@@ -93,7 +93,7 @@ export function* saga(){
 export function* getFavoritesData(){
     try{
         const response  = yield call(api.callFavorites);
-        yield put(actions.favoritesSucceeded(response.body));
+        yield put(actions.getFavoritesSucceeded(response.body));
     }
     catch(error){
         yield put(actions.favoritesFailed("Server Error"));

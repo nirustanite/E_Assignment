@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Header, Segment } from 'semantic-ui-react';
+
 import Page from 'Pages/Page';
-import { Header } from 'semantic-ui-react';
+import Display from 'Components/Display/Display';
+import FavoritesStore from 'Store/Favorites';
 
 const Favorites = () => {
+   
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(FavoritesStore.actions.getFavorites());
+    },[])
+
+    const favoritesList = useSelector(state => state.favorites);
+
+    console.log(favoritesList);
+    
     return(
         <Page>
-           <Header as="h4">Welcome to Favorites</Header>
+            <Segment>
+                <Header as="h2">Favorites</Header>
+                {favoritesList.favorites.length >=1 && <Display listOfItems={favoritesList.favorites} />}
+            </Segment>
         </Page>
     )
 }

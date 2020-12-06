@@ -37,7 +37,7 @@ export default function reducer(state=initialState, action){
         case types.FETCH_SHARED_PROJECTS_SUCCEEDED:
             return {
                 ...state,
-                projects: action.projects,
+                sharedProjects: action.sharedProjects,
                 loading: false
             };
         case types.FETCH_SHARED_PROJECTS_FAILED:
