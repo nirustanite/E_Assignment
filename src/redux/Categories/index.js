@@ -1,3 +1,3 @@
-import reducer, { actions, saga } from './ducks';
+import reducer, { actions, saga, types, getCategories } from './ducks';
 
-export default { reducer, actions, saga };
+export default { reducer, actions, saga, types, getCategories };

@@ -1,19 +1,15 @@
 import { takeEvery, call, put } from "redux-saga/effects";
-// import request from 'superagent';
-// import ConfigData from "ConfigData";
-// import endpoints from 'Util/endpoints';
 import api from '../api';
 
-const types = {
+export const types = {
     FETCH_CATEGORIES_REQUESTED: 'FETCH_CATEGORIES_REQUESTED',
     FETCH_CATEGORIES_SUCCEEDED: 'FETCH_CATEGORIES_SUCCEEDED',
     FETCH_CATEGORIES_FAILED: 'FETCH_CATEGORIES_FAILED'
 }
 
 export const actions = {
-    categoriesFetch : (callback) => ({
+    categoriesFetch : () => ({
         type: types.FETCH_CATEGORIES_REQUESTED,
-        callback
     }),
     categoriesSucceeded: (categories) => ({
         type: types.FETCH_CATEGORIES_SUCCEEDED,
@@ -60,12 +56,10 @@ export function* saga(){
 }
  
 
-export function* getCategories(callback){
+export function* getCategories(){
     try{
         const response  = yield call(api.callCategories);
         yield put(actions.categoriesSucceeded(response.body));
-
-        typeof(callback) === "function" && callback(response.body);
     }
     catch(error){
         yield put(actions.categoriesFailed("Server Error"));

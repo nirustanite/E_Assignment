@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import CategoriesStore from 'Store/Categories';
-import { Menu, Container } from 'semantic-ui-react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Menu, Container, Icon } from 'semantic-ui-react';
 import routes from 'Pages/routes';
 import { useRouteMatch, Link } from "react-router-dom";
 import styled from "styled-components";
+import CategoriesStore from 'Store/Categories';
 
 const CustomMenu = styled(Menu)`
     .item {
@@ -29,13 +29,13 @@ const Nav = () => {
 
     const categoriesList = useSelector(state => state.categories);
 
-    const matchHome = useRouteMatch({
-        path: "/",
-        exact: true
-    });
+    useEffect(() => {
+        dispatch(CategoriesStore.actions.categoriesFetch());
+    }, []);
 
     const matchProjects = useRouteMatch({
-        path: "/projects",
+        path: "/",
+        exact: true
     });
 
     const matchSharedProjects = useRouteMatch({
@@ -44,6 +44,10 @@ const Nav = () => {
 
     const matchFavorites = useRouteMatch({
         path: "/favorites"
+    })
+
+    const matchSettings = useRouteMatch({
+        path: "/settings"
     })
 
     let matchRoutes = [];
@@ -58,22 +62,12 @@ const Nav = () => {
     routesForNav.push(routes.SHARED_PROJECTS);
     routesForNav.push(routes.FAVORITES);
 
-    useEffect(() => {
-        dispatch(CategoriesStore.actions.categoriesFetch());
-    }, []);
-
-
     return(
         <React.Fragment>
             <CustomMenu fixed="top" borderless>
                 <Container>
-                    <Menu.Item
-                        name="HOME"
-                        as={Link}
-                        to={routes.HOME}
-                        active={!!matchHome}
-                    >
-                        Home
+                    <Menu.Item>
+                        Ellipsis Drive
                     </Menu.Item>
 
                     {categoriesList.categories.length >= 1 && categoriesList.categories.map((category,i) => {
@@ -87,6 +81,16 @@ const Nav = () => {
                             {category.name}
                         </Menu.Item>
                     })}
+                    <Menu.Menu position="right"> 
+                        <Menu.Item
+                            name="SETTINGS"
+                            as={Link}
+                            to={routes.SETTINGS}
+                            active={!!matchSettings}
+                        >
+                            <Icon name="settings" /> &nbsp; Settings
+                        </Menu.Item>
+                    </Menu.Menu>
                 </Container>
             </CustomMenu>
         </React.Fragment>
