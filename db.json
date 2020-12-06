@@ -12,5 +12,139 @@
             "id": 3,
             "name": "Favorities"
         }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "categoryId": 1,
+            "type": "map",
+            "name": "Map 1",
+            "status": "Uploaded",
+            "date": "24-01-2020",
+            "src": "https://i.stack.imgur.com/I50Wu.jpg"
+        },
+        {
+            "id": 2,
+            "categoryId": 1,
+            "type": "Shape",
+            "name": "Shape 1",
+            "status": "Progress",
+            "date": "30-11-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 3,
+            "categoryId": 1,
+            "type": "Shape",
+            "name": "Shape 2",
+            "status": "Uploaded",
+            "date": "10-11-2019",
+            "src": "https://i.stack.imgur.com/I50Wu.jpg"
+        },
+        {
+            "id": 4,
+            "categoryId": 1,
+            "type": "Map",
+            "name": "Map 2",
+            "status": "Progress",
+            "date": "30-11-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 5,
+            "categoryId": 1,
+            "type": "Shape",
+            "name": "Shape 3",
+            "status": "Progress",
+            "date": "30-11-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 6,
+            "categoryId": 1,
+            "type": "map",
+            "name": "Map 3",
+            "status": "Progress",
+            "date": "01-12-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        }
+    ],
+    "sharedProjects": [
+        {
+            "id": 1,
+            "categoryId": 2,
+            "type": "map",
+            "name": "Shared Map 1",
+            "status": "Uploaded",
+            "date": "24-02-2020",
+            "src": "https://i.stack.imgur.com/I50Wu.jpg"
+        },
+        {
+            "id": 2,
+            "categoryId": 2,
+            "type": "Shape",
+            "name": "Shared Shape 1",
+            "status": "Progress",
+            "date": "29-11-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 3,
+            "categoryId": 2,
+            "type": "Shape",
+            "name": "Shared Shape 2",
+            "status": "Uploaded",
+            "date": "01-11-2019",
+            "src": "https://i.stack.imgur.com/I50Wu.jpg"
+        },
+        {
+            "id": 4,
+            "categoryId": 2,
+            "type": "Map",
+            "name": "Shared Map 2",
+            "status": "Progress",
+            "date": "29-11-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 5,
+            "categoryId": 2,
+            "type": "Shape",
+            "name": "Shared Shape 3",
+            "status": "Progress",
+            "date": "29-11-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 6,
+            "categoryId": 2,
+            "type": "map",
+            "name": "Shared Map 3",
+            "status": "Progress",
+            "date": "02-12-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        }
+    ],
+    "favorites":[
+        {
+            "id": 1,
+            "categoryId": 3,
+            "sharedProjectId": 6,
+            "type": "map",
+            "name": "Shared Map 3",
+            "status": "Progress",
+            "date": "02-12-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 2,
+            "categoryId": 1,
+            "projectId": 5,
+            "type": "Shape",
+            "name": "Shape 3",
+            "status": "Progress",
+            "date": "30-11-2020",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        }
     ]
 }

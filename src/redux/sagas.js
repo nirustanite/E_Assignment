@@ -1,9 +1,14 @@
 import { fork, all } from "redux-saga/effects";
 import map from "lodash/map";
-import Categories from './Categories';
+
+import categories from './Categories';
+import projects from './Projects';
+import sharedProjects from './SharedProjects';
 
 const combinedSagas = [
-   Categories.saga
+   categories.saga,
+   projects.saga,
+   sharedProjects.saga
 ];
 
 export default function* root() {

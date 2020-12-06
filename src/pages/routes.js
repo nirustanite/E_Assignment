@@ -1,8 +1,8 @@
 const routes = {
-    HOME: "/",
-    PROJECTS: '/projects',
+    PROJECTS: "/",
     SHARED_PROJECTS: '/shared-projects',
-    FAVORITES: "/favorites"
+    FAVORITES: "/favorites",
+    SETTINGS: "/settings"
 }
 
 export default routes;
