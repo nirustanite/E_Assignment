@@ -1,0 +1,56 @@
+
+table {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  
+  
+  table tr {
+    padding: .35em !important;
+  }
+  
+  table th,
+  table td {
+    padding: .625em !important;
+    text-align: center !important;
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: none !important;
+    }
+    
+    table thead {
+      border: none !important;
+      clip: rect(0 0 0 0) !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      position: absolute !important;
+      width: 1px !important;
+    }
+    
+    table tr {
+      display: block !important;
+      margin-bottom: .625em !important;
+    }
+    
+    table td {
+      display: block !important;
+      font-size: .8em !important;
+      text-align: right !important;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label) !important;
+      float: left !important;
+      font-weight: bold !important;
+      text-transform: uppercase !important;
+    }
+    
+  }
