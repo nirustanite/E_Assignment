@@ -15,9 +15,6 @@ const api = {
     callFavorites: () => {
         return request.get(`${ConfigData.url}/${endpoints.FAVORITES}`);
     },
-    callSaveFavorites: (data) => {
-        return request.post(`${ConfigData.url}/${endpoints.FAVORITES}`).send(data);
-    }
 }
 
 export default api;

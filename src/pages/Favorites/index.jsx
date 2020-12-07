@@ -11,7 +11,7 @@ const Favorites = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(FavoritesStore.actions.getFavorites());
+        dispatch(FavoritesStore.actions.favoritesFetch());
     },[])
 
     const favoritesList = useSelector(state => state.favorites);

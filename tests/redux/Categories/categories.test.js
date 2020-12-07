@@ -126,7 +126,7 @@ describe('CategoriesStore getCategoriesSaga', () => {
 
         const dispatched = [];
 
-        const result = await runSaga({
+        await runSaga({
           dispatch: (action) => dispatched.push(action),
         }, Categories.getCategories);
 
