@@ -18,7 +18,9 @@ const Projects = () => {
 
     return(
         <Page>
-            <Segment>
+            <Segment style={{
+                paddingTop: "20px"
+            }}>
                 <Header as="h2">Projects</Header>
                 {projectsList.projects.length >=1 && <DisplayContainer listOfItems={projectsList.projects} showfavorite={true} />}
             </Segment>
