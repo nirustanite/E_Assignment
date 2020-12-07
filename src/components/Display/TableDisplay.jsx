@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Table, Header, Image, Icon, Button } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StyledButton = styled(Button)`
+    background-color: white !important;
+`;
 
 const Display = (props) => {
 
-    const items = props.listOfItems;
+    const { 
+        listOfItems, 
+    } = props;
 
-    console.log(items);
 
     return(
         <React.Fragment>
@@ -18,13 +23,16 @@ const Display = (props) => {
                         <Table.HeaderCell>Status</Table.HeaderCell>
                         <Table.HeaderCell>Owner</Table.HeaderCell>
                         <Table.HeaderCell>Date</Table.HeaderCell>
+
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
-                    {items.length >=1 && items.map((item,i) => {
-                        return <Table.Row key={i}>
+                    {listOfItems.length >=1 && listOfItems.map((item,i) => {
+                        return <Table.Row key={i} verticalAlign="middle">
                                 <Table.Cell>
-                                     {item.name}
+                                    <StyledButton icon >
+                                        <u style={{ color: "#089ec8"}}>{item.name}</u>
+                                    </StyledButton>     
                                 </Table.Cell>
                                 <Table.Cell>
                                     {item.type}

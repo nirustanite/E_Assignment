@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Header, Segment } from 'semantic-ui-react';
 
 import Page from 'Pages/Page';
-import Display from 'Components/Display/Display';
+import DisplayContainer from 'Components/Display/DisplayContainer';
 import ProjectsStore from 'Store/Projects';
 
 const Projects = () => {
@@ -20,7 +20,7 @@ const Projects = () => {
         <Page>
             <Segment>
                 <Header as="h2">Projects</Header>
-                {projectsList.projects.length >=1 && <Display listOfItems={projectsList.projects} />}
+                {projectsList.projects.length >=1 && <DisplayContainer listOfItems={projectsList.projects} showfavorite={true} />}
             </Segment>
         </Page>
     )
