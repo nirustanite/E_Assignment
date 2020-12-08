@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TableDisplay from './TableDisplay';
+import TableDisplay from './TableDisplay/TableDisplay';
 
 const DisplayContainer = (props) => {
 

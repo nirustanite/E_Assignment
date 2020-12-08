@@ -12,7 +12,9 @@ table {
   table th,
   table td {
     padding: .625em !important;
-    text-align: center !important;
+    color: #0D2E4C !important;
+    font-family: "Roboto Condensed", "Roboto", "Arial", "sans-serif" !important;
+    font-size: 1.1rem !important;
   }
   
   

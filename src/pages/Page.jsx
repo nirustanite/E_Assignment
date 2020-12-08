@@ -8,7 +8,7 @@ const StyledContainer = styled(Container)`
     padding-bottom: 5em;
 
     @media screen and (max-width: 600px)  {
-        padding-top: 60%;
+        padding-top: 70%;
     }
 `;
 
