@@ -11,7 +11,6 @@ const Display = (props) => {
         listOfItems, 
     } = props;
 
-
     const pageLimit = 3;
  
     const [offset, setOffset] = useState(0);
@@ -20,7 +19,7 @@ const Display = (props) => {
 
     useEffect(() => {
         setCurrentData(listOfItems.slice(offset, offset + pageLimit));
-    }, [offset, listOfItems])
+    }, [offset, listOfItems]);
 
     return(
         <React.Fragment>
