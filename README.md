@@ -30,6 +30,8 @@
 
       `cd E_Assignment`
 
+3. Change .env.sample file to .env file
+
 <a name="installations"></a>
 #### Installation
 

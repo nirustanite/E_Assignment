@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Segment, Image, Container, Divider } from 'semantic-ui-react';
+import { Menu, Segment, Image, Container, Header } from 'semantic-ui-react';
 import styled from 'styled-components';
 
 const MainDiv = styled.div`
@@ -19,6 +19,7 @@ const SubDiv = styled.div`
 const ColDiv = styled.div`
     display: flex;
     flex-direction: column;  
+    justify-content: space-evenly;
 `;
 
 const StyledP = styled.div`
@@ -58,22 +59,20 @@ const MenuTabular = (props) => {
                         <MainDiv>
                             <Image src={item.src} size="medium" style={{ paddingRight : "20px"}} />
                             <ColDiv>
+                                <SubDiv>  
+                                    <Image avatar src={item.avatar} rounded size="mini" />  &nbsp; <p style={{
+                                        fontSize: "2rem"
+                                    }}> {item.owner} </p>
+                                </SubDiv>
                                 <SubDiv>
                                     <StyledP> Name :</StyledP> &nbsp; {item.name}
                                 </SubDiv>
-                                <Divider />
                                 <SubDiv> 
                                     <StyledP>Type :</StyledP> &nbsp; {item.type}
                                 </SubDiv>
-                                <Divider />
-                                <SubDiv>  
-                                    <StyledP>Owner :</StyledP>  &nbsp; <Image avatar src={item.avatar} rounded size="mini" />  &nbsp; {item.owner} 
-                                </SubDiv>
-                                <Divider />
                                 <SubDiv> 
                                     <StyledP>Date : </StyledP> &nbsp; {item.date} 
                                 </SubDiv>
-                                <Divider />
                             </ColDiv>
                         </MainDiv>
                     </Container>

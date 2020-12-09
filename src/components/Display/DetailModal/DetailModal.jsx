@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button } from 'semantic-ui-react';
+import { Modal, Button, Image } from 'semantic-ui-react';
 import MenuTabular from '../MenuTabular/MenuTabular';
 import styled from 'styled-components';
 
@@ -34,7 +34,9 @@ const DetailModal = (props) => {
             onOpen={onOpen}
             open={open}
         >
-             <Modal.Header> Details </Modal.Header>
+             <Modal.Header> 
+                Details 
+            </Modal.Header>
              <Modal.Content>
                 <MenuTabular item={item}/>
             </Modal.Content>
