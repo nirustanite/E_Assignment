@@ -1,12 +1,9 @@
-import React from 'react';
-import { Table, Button } from 'semantic-ui-react';
+import React, { useEffect, useState } from 'react';
+import { Table } from 'semantic-ui-react';
+import Paginator from 'react-hooks-paginator';
 import './TableDisplay.css';
-import styled from 'styled-components';
 import Items from'./Items';
 
-const StyledButton = styled(Button)`
-    background: none !important;
-`;
 
 const Display = (props) => {
 
@@ -15,7 +12,15 @@ const Display = (props) => {
     } = props;
 
 
-   
+    const pageLimit = 3;
+ 
+    const [offset, setOffset] = useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [currentData, setCurrentData] = useState([]);
+
+    useEffect(() => {
+        setCurrentData(listOfItems.slice(offset, offset + pageLimit));
+    }, [offset, listOfItems])
 
     return(
         <React.Fragment>
@@ -31,7 +36,7 @@ const Display = (props) => {
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
-                    {listOfItems.length >=1 && listOfItems.map((item) => {
+                    {currentData.length >=1 && currentData.map((item) => {
                         return <Items 
                             key={item.id}
                             item={item} 
@@ -39,6 +44,14 @@ const Display = (props) => {
                     })}
                 </Table.Body>
             </Table>
+            <Paginator
+                totalRecords={listOfItems.length}
+                pageLimit={pageLimit}
+                pageNeighbours={1}
+                setOffset={setOffset}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+            />
         </React.Fragment>
     );
 };
