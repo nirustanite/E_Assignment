@@ -1,5 +1,9 @@
 # E_Assignment
-    A React and Redux application. The application shows a list of projects and list of Shared projects and Favorites. The list is paginated. The list can be filtered based on type (Map/Shape). When clicked on Action, the modal opens with details of the map/shape along with the settings tab.
+    1. A React and Redux application. 
+    2. The application shows a list of projects and list of Shared projects and Favorites. 
+    3. The list is paginated. 
+    4. The list can be filtered based on type (Map/Shape). 
+    5. When clicked on Action, the modal opens with details of the map/shape along with the settings tab.
 
 ### Table of Contents
 1. [Setup of the Project](#setup)
