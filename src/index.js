@@ -5,6 +5,7 @@ import 'regenerator-runtime/runtime';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import './index.css'
 
 import 'semantic-ui-less/semantic.less';
 

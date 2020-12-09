@@ -24,7 +24,7 @@ export const actions = {
 const initialState = {
     projects: [],
     error: "",
-    loading: false
+    loading: false,
 };
 
 export default function reducer(state=initialState, action){

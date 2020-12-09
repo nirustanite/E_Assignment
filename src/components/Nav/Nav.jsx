@@ -7,21 +7,34 @@ import styled from "styled-components";
 import CategoriesStore from 'Store/Categories';
 
 const CustomMenu = styled(Menu)`
+    border: none !important;
+    background-color: #0D2E4C !important;
+    
     .item {
+        color: white !important;
+       
         &:first-child {
             border-left: 0px !important;
         }
 
         &::before {
             display: none;
-        }
+        }    
 
         &.active {
             box-shadow: 0px -2px 0px 0px #089ec8 inset !important;
-            background: #fff !important;
+            background: #089ec8 !important;
+            color: white !important;
         }
     }
+    
 `;
+
+const StyledDiv = styled.div`
+   display: flex;
+   flex-driection: row;
+`;
+
 
 const Nav = () => {
 
@@ -39,7 +52,7 @@ const Nav = () => {
     });
 
     const matchSharedProjects = useRouteMatch({
-        path: "/shared",
+        path: "/shared-projects",
     })
 
     const matchFavorites = useRouteMatch({
@@ -62,12 +75,14 @@ const Nav = () => {
     routesForNav.push(routes.SHARED_PROJECTS);
     routesForNav.push(routes.FAVORITES);
 
+    const icons = ["folder", "external share", "star"]
+
     return(
         <React.Fragment>
-            <CustomMenu fixed="top" borderless>
+            <CustomMenu fixed="top" stackable>
                 <Container>
                     <Menu.Item>
-                        Ellipsis Drive
+                       Ellipsis Drive
                     </Menu.Item>
 
                     {categoriesList.categories.length >= 1 && categoriesList.categories.map((category,i) => {
@@ -78,7 +93,7 @@ const Nav = () => {
                             to={routesForNav[i]}
                             active={!!matchRoutes[i]}
                         >
-                            {category.name}
+                           <StyledDiv> <Icon name={icons[i]} /> {category.name} </StyledDiv>
                         </Menu.Item>
                     })}
                     <Menu.Menu position="right"> 
@@ -88,7 +103,7 @@ const Nav = () => {
                             to={routes.SETTINGS}
                             active={!!matchSettings}
                         >
-                            <Icon name="settings" /> &nbsp; Settings
+                           <StyledDiv> <Icon name="settings" /> &nbsp; Settings </StyledDiv>
                         </Menu.Item>
                     </Menu.Menu>
                 </Container>

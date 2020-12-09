@@ -174,5 +174,177 @@
             "avatar":"https://react.semantic-ui.com/images/avatar/small/matthew.png",
             "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
         }
+    ],
+    "maps": [
+        {
+            "id": 1,
+            "categoryId": 1,
+            "favorite": false,
+            "type": "Map",
+            "name": "Map 1",
+            "status": "Uploaded",
+            "date": "24-01-2020",
+            "owner": "Person 1",
+            "avatar":"https://react.semantic-ui.com/images/avatar/small/matthew.png",
+            "src": "https://i.stack.imgur.com/I50Wu.jpg"
+        },
+        {
+            "id": 2,
+            "categoryId": 1,
+            "favorite": false,
+            "type": "Map",
+            "name": "Map 2",
+            "status": "Progress",
+            "date": "30-11-2020",
+            "owner": "Person 2",
+            "avatar":"https://react.semantic-ui.com/images/avatar/small/lena.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 3,
+            "categoryId": 1,
+            "favorite": false,
+            "type": "Map",
+            "name": "Map 3",
+            "status": "Progress",
+            "date": "01-12-2020",
+            "owner": "Person 3",
+            "avatar":"https://react.semantic-ui.com/images/avatar/small/lindsay.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 4,
+            "categoryId": 2,
+            "favorite": false,
+            "type": "Map",
+            "name": "Shared Map 1",
+            "status": "Uploaded",
+            "date": "24-02-2020",
+            "owner": "Person 4",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/mark.png",
+            "src": "https://i.stack.imgur.com/I50Wu.jpg"
+        },
+        {
+            "id": 5,
+            "categoryId": 2,
+            "favorite": false,
+            "type": "Map",
+            "name": "Shared Map 2",
+            "status": "Progress",
+            "date": "29-11-2020",
+            "owner":"Person 4",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/mark.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 6,
+            "categoryId": 2,
+            "favorite": false,
+            "type": "Map",
+            "name": "Shared Map 3",
+            "status": "Progress",
+            "date": "02-12-2020",
+            "owner":"Person 4",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/mark.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 1,
+            "categoryId": 3,
+            "favorite": true,
+            "type": "Map",
+            "name": "Shared Map 3",
+            "status": "Progress",
+            "date": "02-12-2020",
+            "owner":"Person 4",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/mark.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        }
+    ],
+    "shapes":[
+        {
+            "id": 1,
+            "categoryId": 1,
+            "favorite": false,
+            "type": "Shape",
+            "name": "Shape 1",
+            "status": "Progress",
+            "date": "30-11-2020",
+            "owner": "Person 2",
+            "avatar":"https://react.semantic-ui.com/images/avatar/small/lena.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 2,
+            "categoryId": 1,
+            "favorite": false,
+            "type": "Shape",
+            "name": "Shape 2",
+            "status": "Uploaded",
+            "date": "10-11-2019",
+            "owner": "Person 3",
+            "avatar":"https://react.semantic-ui.com/images/avatar/small/lindsay.png",
+            "src": "https://i.stack.imgur.com/I50Wu.jpg"
+        },
+        {
+            "id": 3,
+            "categoryId": 1,
+            "favorite": false,
+            "type": "Shape",
+            "name": "Shape 3",
+            "status": "Progress",
+            "date": "30-11-2020",
+            "owner": "Person 1",
+            "avatar":"https://react.semantic-ui.com/images/avatar/small/matthew.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 4,
+            "categoryId": 2,
+            "favorite": false,
+            "type": "Map",
+            "name": "Shared Map 1",
+            "status": "Uploaded",
+            "date": "24-02-2020",
+            "owner": "Person 4",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/mark.png",
+            "src": "https://i.stack.imgur.com/I50Wu.jpg"
+        },
+        {
+            "id": 5,
+            "categoryId": 2,
+            "favorite": false,
+            "type": "Shape",
+            "name": "Shared Shape 1",
+            "status": "Progress",
+            "date": "29-11-2020",
+            "owner": "Person 4",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/mark.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 6,
+            "categoryId": 2,
+            "favorite": false,
+            "type": "Map",
+            "name": "Shared Map 3",
+            "status": "Progress",
+            "date": "02-12-2020",
+            "owner":"Person 4",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/mark.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        },
+        {
+            "id": 7,
+            "categoryId": 1,
+            "favorite": true,
+            "type": "Shape",
+            "name": "Shape 3",
+            "status": "Progress",
+            "date": "30-11-2020",
+            "owner": "Person 1",
+            "avatar":"https://react.semantic-ui.com/images/avatar/small/matthew.png",
+            "src": "https://duncan99.files.wordpress.com/2014/08/polygon1.png"
+        }
     ]
 }
