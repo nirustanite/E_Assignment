@@ -5,6 +5,15 @@
     4. The list can be filtered based on type (Map/Shape). 
     5. When clicked on Action, the modal opens with details of the map/shape along with the settings tab.
 
+### Technologies Used
+   1. React Hooks
+   2. Redux
+   3. Json-server
+   4. Semantic UI
+   5. Jest
+   6. Enzyme
+   7. Webpack
+
 ### Table of Contents
 1. [Setup of the Project](#setup)
 2. [Installations](#installations)
