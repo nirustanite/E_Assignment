@@ -30,7 +30,7 @@
 
       `cd E_Assignment`
 
-3. Change .env.sample file to .env file
+3. Change .env.sample file to .env file and put the backend base url.
 
 <a name="installations"></a>
 #### Installation
